@@ -1,0 +1,25 @@
+{
+  "name": "silence",
+  "version": "1.0.0",
+  "description": "A spiritual focus application with ML-powered app control and geofencing",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "ts-node src/app.ts",
+    "dev": "nodemon --exec ts-node src/app.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "typescript": "^5.0.4",
+    "ts-node": "^10.9.1",
+    "@types/node": "^18.16.0",
+    "@types/express": "^4.17.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "jest": "^29.5.0",
+    "@types/jest": "^29.5.1",
+    "ts-jest": "^29.1.0"
+  }
+}
