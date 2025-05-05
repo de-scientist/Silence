@@ -50,14 +50,16 @@ export class SanctifyApp {
           appName: 'Bible App',
           category: AppCategory.Bible,
           isAllowed: true,
-          overrideLevel: OverrideLevel.Always
+          overrideLevel: OverrideLevel.Always,
+          mlEnabled: true
         },
         {
           appId: 'notes-app',
           appName: 'Notes App',
           category: AppCategory.Notes,
           isAllowed: true,
-          overrideLevel: OverrideLevel.Always
+          overrideLevel: OverrideLevel.Always,
+          mlEnabled: true
         }
       ],
       overrideExpiration: 30 // minutes
@@ -67,7 +69,11 @@ export class SanctifyApp {
 
     const journalSettings: JournalSettings = {
       defaultPrivacy: true,
-      reminderFrequency: 'DAILY',
+      enableReminders: true,
+      reminderTime: '09:00',
+      autoSaveInterval: 300,
+      preferredBibleTranslation: 'NIV',
+      templateEnabled: false
       topicsOfFocus: ['prayer', 'scripture', 'reflection', 'gratitude'],
       analyticsEnabled: true
     };

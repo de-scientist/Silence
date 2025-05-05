@@ -1,6 +1,11 @@
 import { AppCategory, AppConfig } from './geofence';
 import { UserRole } from './prompts';
 
+export interface MLState {
+  predictions: Map<string, number>;
+  lastUpdate: Date;
+}
+
 export interface MLFeatures {
   userRole: UserRole;
   appCategory: AppCategory;

@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 245, 247, 250;
+  --background-end-rgb: 224, 233, 242;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 26, 36, 54;
+    --background-end-rgb: 47, 60, 84;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+@layer components {
+  .sacred-card {
+    @apply bg-white dark:bg-sacred-800 rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .spirit-button {
+    @apply bg-spirit-600 hover:bg-spirit-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200;
+  }
+  
+  .sacred-input {
+    @apply border-2 border-sacred-200 focus:border-sacred-500 rounded-md px-3 py-2 outline-none transition-colors duration-200;
+  }
+}
